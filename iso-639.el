@@ -8413,7 +8413,7 @@
             ("zun" nil  "zun" nil 'I  'L  "isolate" nil "Zuni")
             ("zuy" nil  nil   nil 'I  'L  "Afro-Asiatic" nil "Zumaya")
             ("zwa" nil  nil   nil 'I  'L  "Afro-Asiatic" nil "Zay")
-            ("zxx" nil  "zxx" nil 'S  'S  nil nil "(none)")
+            ("zxx" nil  "zxx" nil 'S  'S  nil nil "No linguistic content; Not applicable")
             ("zyb" nil  nil   nil 'I  'L  "Tai–Kadai" nil "Yongbei Zhuang")
             ("zyg" nil  nil   nil 'I  'L  "Tai–Kadai" nil "Yang Zhuang")
             ("zyj" nil  nil   nil 'I  'L  "Tai–Kadai" nil "Youjiang Zhuang")
