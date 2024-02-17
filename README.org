@@ -1,3 +1,5 @@
-# emacs-iso-639
-
+* emacs-iso-639
+:PROPERTIES:
+  :CUSTOM_ID: emacs-iso-639
+:END:
 An Emacs package to work with ISO-639 language codes.
