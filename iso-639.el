@@ -1470,7 +1470,7 @@
             ("cpi" nil  nil   nil "I/L" nil "" "Chinese Pidgin English")
             ("cpn" nil  nil   nil "I/L" nil "" "Cherepon")
             ("cpo" nil  nil   nil "I/L" nil "" "Kpeego")
-            ("cpp" "M/L" nil   nil nil "Portuguese-based creoles and pidgins" nil "")
+            (nil   nil  "cpp" nil 'C  nil nil "Portuguese-based creoles and pidgins" nil "")
             ("cps" nil  nil   nil "I/L" nil "" "Capiznon")
             ("cpu" nil  nil   nil "I/L" nil "" "Ashéninka, Pichis")
             ("cpx" nil  nil   nil "I/L" "Chinese" nil "Pu-Xian Chinese")
