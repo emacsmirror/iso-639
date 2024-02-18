@@ -28,6 +28,7 @@
 ;;; Code:
 (require 'levenshtein)
 ;; seq-find
+;; seq-subseq
 (require 'seq)
 
 (defconst iso-639---languages
@@ -8581,14 +8582,11 @@ The tenth element is the name of the language in English.")
                          (mapcar (lambda (mapping)
                                    (iso-639-find-by-code mapping t))
                                  mappings)
-                       (let ((l (car (delq nil
-                                           (mapcar (lambda (ml)
-                                                     (if (member (car lang)
-                                                                 (caddr (cddddr ml)))
-                                                         ml
-                                                       nil))
-                                                   iso-639---languages)))))
-                         (if l (iso-639--create-lang-container l t) l))))))
+                       (when-let ((l (seq-find (lambda (ml)
+                                                 (member (car lang)
+                                                         (caddr (cddddr ml))))
+                                               iso-639---languages)))
+                         (iso-639--create-lang-container l t))))))
           (family      .       ,(cadddr (cddddr lang)))
           (name-native . ,(car  (cddddr (cddddr lang))))
           (name        . ,(cadr (cddddr (cddddr lang)))))))
