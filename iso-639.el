@@ -23,7 +23,7 @@
 
 ;;; Commentary:
 
-;; A library to handle ISO 639 language codes; attempts to cover versions 1–3.
+;; A library to handle ISO 639 language codes; attempts to cover 1–3.
 
 ;;; Code:
 (require 'levenshtein)
