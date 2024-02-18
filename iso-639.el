@@ -8527,10 +8527,12 @@ The fourth element is whether the ISO 639-3 code has been retired or not (a
 boolean).
 
 The fifth element is the Scope of the language, as a symbol of a single letter;
-this gets expanded in ….
+this gets expanded into something human-readable in
+`iso-639--create-lang-container'.
 
 The sixth element is the Type of the language, as a symbol of a single letter;
-this gets expanded in ….
+this gets expanded into something human-readable in
+`iso-639--create-lang-container'.
 
 The seventh element is a list of tags which are mapped to from the language
 (which is a macrolanguage, if the list is not empty).
