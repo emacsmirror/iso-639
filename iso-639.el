@@ -8546,20 +8546,50 @@ The ninth element is the name of the language in its native language.
 
 The tenth element is the name of the language in English.")
 
+(defalias 'iso-639--code-1      'cadr)
+(defalias 'iso-639--code-2      'caddr)
+(defalias 'iso-639--code-3      'car)
+(defalias 'iso-639--retired     'cadddr)
+(defun     iso-639--scope       (lang)
+  "Helper function to get the scope from the language structure, LANG."
+
+        (car    (cddddr lang)))
+(defun     iso-639--type        (lang)
+  "Helper function to get the type from the language structure, LANG."
+
+        (cadr   (cddddr lang)))
+(defun     iso-639--mappings    (lang)
+  "Helper function to get the mappings, if a macrolanguage, from a LANG structure."
+
+        (caddr  (cddddr lang)))
+(defun     iso-639--family      (lang)
+  "Helper function to get the language family from the language structure, LANG."
+
+        (cadddr (cddddr lang)))
+(defun     iso-639--name-native (lang)
+  "Helper function to get the name, in the native spelling, from a LANG structure."
+
+  (car  (cddddr (cddddr lang))))
+(defun     iso-639--name        (lang)
+  "Helper function to get the name from the language structure, LANG."
+
+  (cadr (cddddr (cddddr lang))))
+
 (defun iso-639--create-lang-container (lang &optional skipmacrop)
   ""
 
   (delq nil
-        `((code-3      . ,(car lang))
-          (code-2      . ,(when (caddr lang)
-                            `((biblio  . ,(caddr lang))
-                              (termino . ,(or (car lang) (caddr lang))))))
-          (code-1      . ,(cadr lang))
-          (belongs-to  . ,(delq nil `(,(and (cadr  lang) 'iso-639-1)
-                                      ,(and (caddr lang) 'iso-639-2)
-                                      ,(and (car   lang) 'iso-639-3))))
-          (retired     . ,(cadddr lang))
-          (scope       . ,(let ((s (car (cddddr lang))))
+        `((code-3      . ,(iso-639--code-3 lang))
+          (code-2      . ,(when (iso-639--code-2 lang)
+                            `((biblio  . ,(iso-639--code-2 lang))
+                              (termino . ,(or (iso-639--code-3 lang)
+                                              (iso-639--code-2 lang))))))
+          (code-1      . ,(iso-639--code-1 lang))
+          (belongs-to  . ,(delq nil `(,(and (iso-639--code-1 lang) 'iso-639-1)
+                                      ,(and (iso-639--code-2 lang) 'iso-639-2)
+                                      ,(and (iso-639--code-3 lang) 'iso-639-3))))
+          (retired     . ,(iso-639--retired lang))
+          (scope       . ,(let ((s (iso-639--scope lang)))
                             (cond
                              ((eq s 'C) (concat "Collections of languages "
                                                 "connected, for example "
@@ -8567,7 +8597,7 @@ The tenth element is the name of the language in English.")
                              ((eq s 'I) "Individual language")
                              ((eq s 'M) "Macrolanguage")
                              ((eq s 'S) "Special code"))))
-          (type        . ,(let ((p (cadr (cddddr lang))))
+          (type        . ,(let ((p (iso-639--type lang)))
                             (cond
                              ((eq p 'A) "Ancient (extinct since ancient times)")
                              ((eq p 'C) "Constructed")
@@ -8576,20 +8606,20 @@ The tenth element is the name of the language in English.")
                              ((eq p 'L) "Living")
                              ((eq p 'S) "Special code"))))
           ,(unless skipmacrop
-             (let ((mappings (caddr (cddddr lang))))
+             (let ((mappings (iso-639--mappings lang)))
                (cons (if mappings 'mappings 'macrolang)
                      (if mappings
                          (mapcar (lambda (mapping)
                                    (iso-639-find-by-code mapping t))
                                  mappings)
                        (when-let ((l (seq-find (lambda (ml)
-                                                 (member (car lang)
-                                                         (caddr (cddddr ml))))
+                                                 (member (iso-639--code-3 lang)
+                                                         (iso-639--mappings ml)))
                                                iso-639---languages)))
                          (iso-639--create-lang-container l t))))))
-          (family      .       ,(cadddr (cddddr lang)))
-          (name-native . ,(car  (cddddr (cddddr lang))))
-          (name        . ,(cadr (cddddr (cddddr lang)))))))
+          (family      . ,(iso-639--family      lang))
+          (name-native . ,(iso-639--name-native lang))
+          (name        . ,(iso-639--name        lang)))))
 
 (defun iso-639-find-by-code (code &optional skipmacrop)
   ""
@@ -8608,7 +8638,7 @@ The tenth element is the name of the language in English.")
         (distance  -1))
     (mapc (lambda (lang)
             (let ((d (levenshtein-distance (downcase name)
-                                           (downcase (cadr (cddddr (cddddr lang)))))))
+                                           (downcase (iso-639--name lang)))))
               (when (or (= distance -1) (< d distance))
                 (setq distance d)
                 (setq winner   lang))))
