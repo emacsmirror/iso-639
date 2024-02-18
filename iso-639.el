@@ -4,7 +4,7 @@
 
 ;; Author: Jean Libète <tomenzgg@mail.mayfirst.org>
 ;; URL: https://codeberg.org/tomenzgg/emacs-iso-639
-;; Package-Requires: ((emacs "29.1") (levenshtein "20090830.1040"))
+;; Package-Requires: ((emacs "25.1") (levenshtein "20090830.1040"))
 ;; Version: 1.0
 ;; Keywords: multilingual, language, iso-639
 
@@ -8621,3 +8621,78 @@ The tenth element is the name of the language in English.")
           iso-639---languages)
 
     (iso-639--create-lang-container winner)))
+
+
+
+(defun iso-639-get-code-of-1 (lang)
+  ""
+
+  (alist-get 'code-1 lang))
+(defun iso-639-get-code-of-2 (lang)
+  ""
+
+  (alist-get 'code-2 lang))
+(defun iso-639-get-code-of-2-bibliographical (lang)
+  ""
+
+  (alist-get 'biblio (alist-get 'code-2 lang)))
+(defun iso-639-get-code-of-2-terminological (lang)
+  ""
+
+  (alist-get 'termino (alist-get 'code-2 lang)))
+(defun iso-639-get-code-of-3 (lang)
+  ""
+
+  (alist-get 'code-3 lang))
+
+(defun iso-639-1-p (lang)
+  ""
+
+  (member 'iso-639-1 (alist-get 'belongs-to lang)))
+(defun iso-639-2-p (lang)
+  ""
+
+  (member 'iso-639-2 (alist-get 'belongs-to lang)))
+(defun iso-639-3-p (lang)
+  ""
+
+  (member 'iso-639-3 (alist-get 'belongs-to lang)))
+
+(defun iso-639-retired-p (lang)
+  ""
+
+  (alist-get 'retired lang))
+
+(defun iso-639-get-scope (lang)
+  ""
+
+  (alist-get 'scope lang))
+
+(defun iso-639-get-type (lang)
+  ""
+
+  (alist-get 'type lang))
+
+(defun iso-639-get-macrolanguage-mappings (lang)
+  ""
+
+  (alist-get 'mappings lang))
+(defun iso-639-get-macrolanguage-parent (lang)
+  ""
+
+  (alist-get 'macrolang lang))
+
+(defun iso-639-get-family (lang)
+  ""
+
+  (alist-get 'family lang))
+
+(defun iso-639-get-name-in-native-spelling (lang)
+  ""
+
+  (alist-get 'native lang))
+
+(defun iso-639-get-name (lang)
+  ""
+
+  (alist-get 'name lang))
