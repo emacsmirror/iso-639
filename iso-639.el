@@ -8635,7 +8635,7 @@ other langauges – if CODE is for a macrolanguage – or, alteratively, does no
 try to see if CODE has a mapping to a macrolanguage."
 
   (if (or (not (stringp code)) (not (< 1 (length code) 4)))
-      (error "A provided argument is not an ISO 639-1–3 code: %s" code)
+      (error "Argument is not an ISO 639-1–3 code: %s" code)
     (when-let ((l (seq-find (lambda (lang)
                               (member (downcase code) (seq-subseq lang 0 3)))
                             iso-639---languages)))
@@ -8650,7 +8650,7 @@ other langauges – if CODE is for a macrolanguage – or, alteratively, does no
 try to see if CODE has a mapping to a macrolanguage."
 
   (if (or (not (stringp code)) (/= (length code) 2))
-      (error "A provided argument is not an ISO 639-1 code: %s" code)
+      (error "Argument is not an ISO 639-1 code: %s" code)
     (when-let ((l (seq-find (lambda (lang)
                               (string= (downcase code) (iso-639--code-1 lang)))
                             iso-639---languages)))
@@ -8665,7 +8665,7 @@ other langauges – if CODE is for a macrolanguage – or, alteratively, does no
 try to see if CODE has a mapping to a macrolanguage."
 
   (if (or (not (stringp code)) (/= (length code) 3))
-      (error "A provided argument is not an ISO 639-2 code: %s" code)
+      (error "Argument is not an ISO 639-2 code: %s" code)
     (when-let ((l (seq-find (lambda (lang)
                               (and (iso-639--code-2 lang)
                                    (member (downcase code)
@@ -8683,7 +8683,7 @@ other langauges – if CODE is for a macrolanguage – or, alteratively, does no
 try to see if CODE has a mapping to a macrolanguage."
 
   (if (or (not (stringp code)) (/= (length code) 3))
-      (error "A provided argument is not an ISO 639-3 code: %s" code)
+      (error "Argument is not an ISO 639-3 code: %s" code)
     (when-let ((l (seq-find (lambda (lang)
                               (string= (downcase code) (iso-639--code-3 lang)))
                             iso-639---languages)))
