@@ -8540,3 +8540,35 @@ The eighth element is the linguistic family that the language belongs to.
 The ninth element is the name of the language in its native language.
 
 The tenth element is the name of the language in English.")
+
+(defun iso-639--create-lang-container (lang)
+  ""
+
+  `((code-3      . ,(car lang))
+    (code-2      . ,(when (caddr lang)
+                      `((biblio  . ,(caddr lang))
+                        (termino . ,(or (car lang) (caddr lang))))))
+    (code-1      . ,(cadr lang))
+    (belongs-to  . ,(delq nil `(,(and (cadr  lang) 'iso-639-1)
+                                ,(and (caddr lang) 'iso-639-2)
+                                ,(and (car   lang) 'iso-639-3))))
+    (retired     . ,(cadddr lang))
+    (scope       . ,(let ((s (car (cddddr lang))))
+                      (cond
+                       ((eq s 'C) (concat "Collections of languages connected, "
+                                          "for example genetically or by region"))
+                       ((eq s 'I) "Individual language")
+                       ((eq s 'M) "Macrolanguage")
+                       ((eq s 'S) "Special code"))))
+    (type        . ,(let ((p (cadr (cddddr lang))))
+                      (cond
+                       ((eq p 'A) "Ancient (extinct since ancient times)")
+                       ((eq p 'C) "Constructed")
+                       ((eq p 'E) "Extinct (in recent times)")
+                       ((eq p 'H) "Historical (distinct from its modern form)")
+                       ((eq p 'L) "Living")
+                       ((eq p 'S) "Special code"))))
+    ;; later
+    (family      . ,(cadddr (cddddr lang)))
+    (name-native . ,(car (cddddr (cddddr lang))))
+    (name        . ,(cadr (cddddr (cddddr lang))))))
