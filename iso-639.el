@@ -8511,7 +8511,7 @@
             ("zyp" nil  nil   nil I   L   () "Sino-Tibetan" nil "Zyphe")
             ("zza" nil  "zza" nil M   L   ("diq" "kiu") "Indo-European" nil "Zaza; Dimili")
             ("zzj" nil  nil   nil I   L   () "Tai–Kadai" nil "Zuojiang Zhuang"))
-  "An list of all ISO 639-1, -2, and -3 codes along with info. regarding them.
+  "An list of all ISO 639-1, -2, and -3 codes along with info regarding them.
 
 Each element is a list belonging to an individual language as designated by the
 standardized nomenclatures.
@@ -8538,7 +8538,7 @@ this gets expanded into something human-readable in
 `iso-639--create-lang-container'.
 
 The seventh element is a list of tags which are mapped to from the language
-(which is a macrolanguage, if the list is not empty).
+\(which is a macrolanguage, if the list is not empty).
 
 The eighth element is the linguistic family that the language belongs to.
 
