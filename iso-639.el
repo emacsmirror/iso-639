@@ -8571,6 +8571,6 @@ The tenth element is the name of the language in English.")
                        ((eq p 'L) "Living")
                        ((eq p 'S) "Special code"))))
     ;; later
-    (family      . ,(cadddr (cddddr lang)))
-    (name-native . ,(car (cddddr (cddddr lang))))
+    (family      .       ,(cadddr (cddddr lang)))
+    (name-native . ,(car  (cddddr (cddddr lang))))
     (name        . ,(cadr (cddddr (cddddr lang))))))
