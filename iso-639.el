@@ -8576,7 +8576,11 @@ The tenth element is the name of the language in English.")
   (cadr (cddddr (cddddr lang))))
 
 (defun iso-639--create-lang-container (lang &optional skipmacrop)
-  ""
+  "Form a recognizable data structure from LANG, an entry of `iso-639---languages'.
+
+If SKIPMACROP is \\='t\\=', the function does not try to lookup any mappings to
+other langauges – if LANG is a macrolanguage – or, alteratively, does not try to
+see if LANG is a mapping to a macrolanguage."
 
   (delq nil
         `((code-3      . ,(iso-639--code-3 lang))
@@ -8622,7 +8626,13 @@ The tenth element is the name of the language in English.")
           (name        . ,(iso-639--name        lang)))))
 
 (defun iso-639-find-by-code (code &optional skipmacrop)
-  ""
+  "Provided a two- or three-letter CODE, try to find a corresponding language.
+
+All three – ISO 639-1, ISO 639-2, and ISO 639-3 – are searched to find a match.
+
+If SKIPMACROP is \\='t\\=', the function does not try to lookup any mappings to
+other langauges – if CODE is for a macrolanguage – or, alteratively, does not
+try to see if CODE has a mapping to a macrolanguage."
 
   (if (or (not (stringp code)) (not (< 1 (length code) 4)))
       (error "A provided argument is not an ISO 639-1–3 code: %s" code)
@@ -8631,6 +8641,13 @@ The tenth element is the name of the language in English.")
                             iso-639---languages)))
       (iso-639--create-lang-container l skipmacrop))))
 (defun iso-639-1-find-by-code (code &optional skipmacrop)
+  "Provided a two-letter CODE, try to find a corresponding language.
+
+Only ISO 639-1 codes are checked against.
+
+If SKIPMACROP is \\='t\\=', the function does not try to lookup any mappings to
+other langauges – if CODE is for a macrolanguage – or, alteratively, does not
+try to see if CODE has a mapping to a macrolanguage."
 
   (if (or (not (stringp code)) (/= (length code) 2))
       (error "A provided argument is not an ISO 639-1 code: %s" code)
@@ -8639,6 +8656,13 @@ The tenth element is the name of the language in English.")
                             iso-639---languages)))
       (iso-639--create-lang-container l skipmacrop))))
 (defun iso-639-2-find-by-code (code &optional skipmacrop)
+  "Provided a three-letter CODE, try to find a corresponding language.
+
+Only ISO 639-2 codes are checked against.
+
+If SKIPMACROP is \\='t\\=', the function does not try to lookup any mappings to
+other langauges – if CODE is for a macrolanguage – or, alteratively, does not
+try to see if CODE has a mapping to a macrolanguage."
 
   (if (or (not (stringp code)) (/= (length code) 3))
       (error "A provided argument is not an ISO 639-2 code: %s" code)
@@ -8650,6 +8674,13 @@ The tenth element is the name of the language in English.")
                             iso-639---languages)))
       (iso-639--create-lang-container l skipmacrop))))
 (defun iso-639-3-find-by-code (code &optional skipmacrop)
+  "Provided a three-letter CODE, try to find a corresponding language.
+
+Only ISO 639-3 codes are checked against.
+
+If SKIPMACROP is \\='t\\=', the function does not try to lookup any mappings to
+other langauges – if CODE is for a macrolanguage – or, alteratively, does not
+try to see if CODE has a mapping to a macrolanguage."
 
   (if (or (not (stringp code)) (/= (length code) 3))
       (error "A provided argument is not an ISO 639-3 code: %s" code)
@@ -8659,7 +8690,10 @@ The tenth element is the name of the language in English.")
       (iso-639--create-lang-container l skipmacrop))))
 
 (defun iso-639-find-by-name (name)
-  ""
+  "Try to find a language which has a name which is closest to NAME.
+
+This can never be precise; it is offered in case imprecise convenience is
+desired or when a (possibly) \"good enough\" result may return."
 
   (let ((winner   nil)
         (distance  -1))
@@ -8676,74 +8710,74 @@ The tenth element is the name of the language in English.")
 
 
 (defun iso-639-get-code-of-1 (lang)
-  ""
+  "Given a language structure of LANG, return its ISO 639-1 code (if it has one)."
 
   (alist-get 'code-1 lang))
 (defun iso-639-get-code-of-2 (lang)
-  ""
+  "Given a language structure of LANG, return its ISO 639-2 codes (if it has any)."
 
   (alist-get 'code-2 lang))
 (defun iso-639-get-code-of-2-bibliographical (lang)
-  ""
+  "Given a language structure of LANG, return its bibliographical ISO 639-2 code."
 
   (alist-get 'biblio (alist-get 'code-2 lang)))
 (defun iso-639-get-code-of-2-terminological (lang)
-  ""
+  "Given a language structure of LANG, return its terminological ISO 639-2 code."
 
   (alist-get 'termino (alist-get 'code-2 lang)))
 (defun iso-639-get-code-of-3 (lang)
-  ""
+  "Given a language structure of LANG, return its ISO 639-3 code (if it has one)."
 
   (alist-get 'code-3 lang))
 
 (defun iso-639-1-p (lang)
-  ""
+  "Given a language structure of LANG, return \\='t\\=' if it has an ISO 639-1 code."
 
   (member 'iso-639-1 (alist-get 'belongs-to lang)))
 (defun iso-639-2-p (lang)
-  ""
+  "Given a language structure of LANG, return \\='t\\=' if it has an ISO 639-2 code."
 
   (member 'iso-639-2 (alist-get 'belongs-to lang)))
 (defun iso-639-3-p (lang)
-  ""
+  "Given a language structure of LANG, return \\='t\\=' if it has an ISO 639-3 code."
 
   (member 'iso-639-3 (alist-get 'belongs-to lang)))
 
 (defun iso-639-retired-p (lang)
-  ""
+  "Given a language structure of LANG, return \\='t\\=' if the code has been retired."
 
   (alist-get 'retired lang))
 
 (defun iso-639-get-scope (lang)
-  ""
+  "Given a language structure of LANG, return its scope (if it has one)."
 
   (alist-get 'scope lang))
 
 (defun iso-639-get-type (lang)
-  ""
+  "Given a language structure of LANG, return its type (if it has one)."
 
   (alist-get 'type lang))
 
 (defun iso-639-get-macrolanguage-mappings (lang)
-  ""
+  "Given a language structure of LANG, – if it's a macrolanguage – return mappings."
 
   (alist-get 'mappings lang))
 (defun iso-639-get-macrolanguage-parent (lang)
-  ""
+  "Given a language structure of LANG, return any macrolanguages it maps to."
 
   (alist-get 'macrolang lang))
 
 (defun iso-639-get-family (lang)
-  ""
+  "Given a language structure of LANG, return its language family (if it has one)."
 
   (alist-get 'family lang))
 
 (defun iso-639-get-name-in-native-spelling (lang)
-  ""
+  "Given a language structure of LANG, return its name, spelled in the language."
 
   (alist-get 'native lang))
 
 (defun iso-639-get-name (lang)
-  ""
+  "Given a language structure of LANG, return its name."
 
   (alist-get 'name lang))
