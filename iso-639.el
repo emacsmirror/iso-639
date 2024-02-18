@@ -1616,7 +1616,7 @@
             ("czk" nil  nil   nil I   E   () nil nil "Knaanic")
             ("czn" nil  nil   nil I   L   () nil nil "Chatino, Zenzontepec")
             ("czo" nil  nil   nil I   L   () "Chinese" nil "Min Zhong Chinese")
-            ("czt" nil  nil   nil I   L   () nil "Chin, Zotung")
+            ("czt" nil  nil   nil I   L   () nil nil "Chin, Zotung")
             ;; D
             ("daa" nil  nil   nil I   L   () nil nil "Dangaléat")
             ("dac" nil  nil   nil I   L   () nil nil "Dambi")
@@ -1931,7 +1931,7 @@
             ("dzg" nil  nil   nil I   L   () nil nil "Dazaga")
             ("dzl" nil  nil   nil I   L   () nil nil "Dzalakha")
             ("dzn" nil  nil   nil I   L   () nil nil "Dzando")
-            ("dzo" "dz" "dzo" nil I   L   () "Sino-Tibetan" "རྫོང་ཁ")
+            ("dzo" "dz" "dzo" nil I   L   () "Sino-Tibetan" "རྫོང་ཁ" "Dzongkha")
             ;; E
             ("eaa" nil  nil   nil I   E   () nil nil "Karenggapa")
             ("ebc" nil  nil   nil I   L   () nil nil "Beginci")
