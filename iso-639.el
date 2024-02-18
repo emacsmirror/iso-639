@@ -8574,3 +8574,19 @@ The tenth element is the name of the language in English.")
     (family      .       ,(cadddr (cddddr lang)))
     (name-native . ,(car  (cddddr (cddddr lang))))
     (name        . ,(cadr (cddddr (cddddr lang))))))
+
+(defun iso-639-find-by-code (code)
+  ""
+
+  (if (or (not (stringp code)) (not (< 1 (length code) 4)))
+      (error "A provided argument is not an ISO 639-1–3 code: %s" code)
+    (let ((l (car (delq nil
+                        (mapcar (lambda (lang)
+                                  (if (member (downcase code)
+                                              (list (car   lang)
+                                                    (cadr  lang)
+                                                    (caddr lang)))
+                                      lang
+                                    nil))
+                                iso-639---languages)))))
+      (if l (iso-639--create-lang-container l) l))))
