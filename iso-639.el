@@ -8570,7 +8570,19 @@ The tenth element is the name of the language in English.")
                        ((eq p 'H) "Historical (distinct from its modern form)")
                        ((eq p 'L) "Living")
                        ((eq p 'S) "Special code"))))
-    ;; later
+    ,(let ((mappings (caddr (cddddr lang))))
+       (cons (if mappings 'mappings 'macrolang)
+             (if mappings
+                 (mapcar #'iso-639-find-by-code
+                         mappings)
+               (let ((l (car (delq nil
+                                   (mapcar (lambda (ml)
+                                             (if (member (car lang)
+                                                         (caddr (cddddr ml)))
+                                                 ml
+                                               nil))
+                                           iso-639---languages)))))
+                 (if l (iso-639--create-lang-container l) l)))))
     (family      .       ,(cadddr (cddddr lang)))
     (name-native . ,(car  (cddddr (cddddr lang))))
     (name        . ,(cadr (cddddr (cddddr lang))))))
