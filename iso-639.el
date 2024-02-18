@@ -6,7 +6,7 @@
 ;; URL: https://codeberg.org/tomenzgg/emacs-iso-639
 ;; Package-Requires: ((emacs "25.1") (levenshtein "20090830.1040"))
 ;; Version: 1.0
-;; Keywords: multilingual, language, iso-639
+;; Keywords: tools, multilingual, language, iso-639
 
 ;; This program is free software; you can redistribute it and/or modify
 ;; it under the terms of the GNU Affero General Public License as published
