@@ -233,7 +233,7 @@
             ("aju" nil  nil   nil 'I  'L  () "Afro-Asiatic" nil "Arabic (Judeo-Moroccan)")
             ("ajw" nil  nil   nil 'I  'E  () "Afro-Asiatic" nil "Ajawa")
             ("ajz" nil  nil   nil 'I  'L  () "Sino-Tibetan" nil "Amri")
-            ("aka" "ak" "aka" nil 'M  'L  () "Atlantic–Congo" "Akan" "Akan")
+            ("aka" "ak" "aka" nil 'M  'L  ("fat" "twi") "Atlantic–Congo" "Akan" "Akan")
             ("akb" nil  nil   nil 'I  'L  () "Austronesian" nil "Batak Angkola")
             ("akc" nil  nil   nil 'I  'L  () "isolate" nil "Mpur")
             ("akd" nil  nil   nil 'I  'L  () "Atlantic–Congo" nil "Ukpet-Ehom")
@@ -391,7 +391,16 @@
             ("aqr" nil  nil   nil 'I  'L  () "Austronesian" nil "Arhâ")
             ("aqt" nil  nil   nil 'I  'L  () "Mascoian" nil "Angaité")
             ("aqz" nil  nil   nil 'I  'L  () "Tupian" nil "Akuntsu")
-            ("ara" "ar" "ara" nil 'M  'L  () "Afro-Asiatic" "العربية" "Arabic")
+            ("ara" "ar" "ara" nil 'M  'L  ("aao" "abh" "abv"
+                                           "acm" "acq" "acw"
+                                           "acx" "acy" "adf"
+                                           "aeb" "aec" "afb"
+                                           "apc" "apd" "arb"
+                                           "arq" "ars" "ary"
+                                           "arz" "auz" "avl"
+                                           "ayh" "ayl" "ayn"
+                                           "ayp" "pga" "shu"
+                                           "ssh" "ajp" "bbz") "Afro-Asiatic" "العربية" "Arabic")
             ("arb" nil  nil   nil 'I  'L  () "Afro-Asiatic" "لعربية" "Arabic (standard)")
             ("arc" nil  "arc" nil 'I  'A  () "Afro-Asiatic" "ܐܪܡܝܐ" "Aramaic")
             ("ard" nil  nil   nil 'I  'E  () "Pama–Nyungan" nil "Arabana")
@@ -543,7 +552,7 @@
             ("ayi" nil  nil   nil 'I  'L  () "Niger–Congo" nil "Yigha")
             ("ayk" nil  nil   nil 'I  'L  () "Niger–Congo" nil "Akuku")
             ("ayl" nil  nil   nil 'I  'L  () "Afro-Asiatic" nil "Arabic (Libyan)")
-            ("aym" "ay" "aym" nil 'M  'L  () "Aymaran" "aymar" "Aymara")
+            ("aym" "ay" "aym" nil 'M  'L  ("ayc" "ayr") "Aymaran" "aymar" "Aymara")
             ("ayn" nil  nil   nil 'I  'L  () "Afro-Asiatic" nil "Arabic (Sanaani)")
             ("ayo" nil  nil   nil 'I  'L  () "Zamucoan" nil "Ayoreo")
             ("ayp" nil  nil   nil 'I  'L  () "Afro-Asiatic" nil "Arabic (North Mesopotamian)")
@@ -558,7 +567,7 @@
             ("aza" nil  nil   nil 'I  'L  () "Sino-Tibetan" nil "Azha")
             ("azb" nil  nil   nil 'I  'L  () "Turkic" nil "Azerbaijani, South")
             ("azd" nil  nil   nil 'I  'L  () "Uto-Aztecan" nil "Eastern Durango Nahuatl")
-            ("aze" "az" "aze" nil 'M  'L  () "Turkic" "Azərbaycan" "Azerbaijani")
+            ("aze" "az" "aze" nil 'M  'L  ("azb" "azj") "Turkic" "Azərbaycan" "Azerbaijani")
             ("azg" nil  nil   nil 'I  'L  () "Oto-Manguean" nil "Amuzgo (San Pedro Amuzgos)")
             ("azj" nil  nil   nil 'I  'L  () "Azeri" nil "Azerbaijani (North)")
             ("azm" nil  nil   nil 'I  'L  () "Oto-Manguean" nil "Amuzgo (Ipalapa)")
@@ -579,7 +588,7 @@
             (nil   nil  "bai" nil 'C  nil () nil nil "Bamileke languages")
             ("baj" nil  nil   nil 'I  'L  () "Austronesian" nil "Barakai")
             ("bak" "ba" "bak" nil 'I  'L  () "Turkic" "башҡорт" "Bashkir")
-            ("bal" nil  "bal" nil 'M  'L  () "Indo-European" "بلوچی" "Baluchi")
+            ("bal" nil  "bal" nil 'M  'L  ("bcc" "bgn" "bgp") "Indo-European" "بلوچی" "Baluchi")
             ("bam" "bm" "bam" nil 'I  'L  () "Niger–Congo" "bamanankan" "Bambara")
             ("ban" nil  "ban" nil 'I  'L  () "Austronesian" "Basa Bali" "Balinese")
             ("bao" nil  nil   nil 'I  'L  () "Tucanoan" nil "Waimaha")
@@ -784,7 +793,9 @@
             (nil   nil  "bih" nil 'C  nil () nil nil "Bihari languages")
             ("bii" nil  nil   t   nil nil () "Sino-Tibetan" nil "Bisu")
             ("bij" nil  nil   t   'I  'L  () "Niger-Congo" nil "Vaghat-Ya-Bijim-Legeri")
-            ("bik" nil  "bik" nil 'M  'L  () "Austronesian" "Bicol" "Bikol")
+            ("bik" nil  "bik" nil 'M  'L  ("bcl" "bln" "bto"
+                                           "cts" "fbl" "lbl"
+                                           "rbl" "ubl" "bhk") "Austronesian" "Bicol" "Bikol")
             ("bil" nil  nil   nil 'I  'L  () "Niger-Congo" nil "Bile")
             ("bim" nil  nil   nil 'I  'L  () "Niger-Congo" nil "Bimoba")
             ("bin" nil  "bin" nil 'I  'L  () "Niger-Congo" "Èdó" "Bini")
@@ -906,7 +917,8 @@
             ("bmz" nil  nil   nil 'I  'L  () "Trans-New Guinea" nil "Baramu")
             ("bna" nil  nil   nil 'I  'L  () "Austronesian" nil "Bonerate")
             ("bnb" nil  nil   nil 'I  'L  () "Austronesian" nil "Bookan")
-            ("bnc" nil  nil   nil 'M  'L  () "Austronesian" nil "Bontoc, Central")
+            ("bnc" nil  nil   nil 'M  'L  ("ebk" "lbk"
+                                           "obk" "rbk" "vbk") "Austronesian" nil "Bontoc, Central")
             ("bnd" nil  nil   nil 'I  'L  () "Austronesian" nil "Banda (Indonesia)")
             ("bne" nil  nil   nil 'I  'L  () "Austronesian" nil "Bintauna")
             ("bnf" nil  nil   nil 'I  'L  () "Austronesian" nil "Masiwang")
@@ -1085,7 +1097,7 @@
             ("btx" nil  nil   nil 'I  'L  () nil nil "Batak Karo")
             ("bty" nil  nil   nil 'I  'L  () nil nil "Bobot")
             ("btz" nil  nil   nil 'I  'L  () nil nil "Batak Alas-Kluet")
-            ("bua" nil  "bua" nil 'M  'L  () nil "буряад" "Buriat")
+            ("bua" nil  "bua" nil 'M  'L  ("bxm" "bxr" "bxu") nil "буряад" "Buriat")
             ("bub" nil  nil   nil 'I  'L  () nil nil "Bua")
             ("buc" nil  nil   nil 'I  'L  () nil nil "Bushi")
             ("bud" nil  nil   nil 'I  'L  () nil nil "Ntcham")
@@ -1344,7 +1356,7 @@
             ("chj" nil  nil   nil 'I  'L  () nil nil "Chinantec, Ojitlán")
             ("chk" nil  "chk" nil 'I  'L  () nil nil "Chuukese")
             ("chl" nil  nil   nil 'I  'L  () nil nil "Cahuilla")
-            ("chm" nil  "chm" nil 'M  'L  () nil "марий" "Mari (Russia)")
+            ("chm" nil  "chm" nil 'M  'L  ("mhr" "mrj") nil "марий" "Mari (Russia)")
             ("chn" nil  "chn" nil 'I  'L  () nil "chinuk wawa" "Chinook jargon")
             ("cho" nil  "cho" nil 'I  'L  () nil "Chahta" "Choctaw")
             ("chp" nil  "chp" nil 'I  'L  () nil "ᑌᓀᓲᒢᕄᓀ (Dëne Sųłiné)" "Chipewyan")
@@ -1500,7 +1512,8 @@
             ("crb" nil  nil   nil 'I  'E  () nil nil "Carib, Island")
             ("crc" nil  nil   nil 'I  'L  () nil nil "Lonwolwol")
             ("crd" nil  nil   nil 'I  'L  () nil nil "Coeur d'Alene")
-            ("cre" "cr" "cre" nil 'M  'L  () "Cree" "ᓀᐦᐃᔭᐤ (Nehiyāw)" "Cree")
+            ("cre" "cr" "cre" nil 'M  'L  ("crj" "crk" "crl"
+                                           "crm" "csw" "cwd") "Cree" "ᓀᐦᐃᔭᐤ (Nehiyāw)" "Cree")
             ("crf" nil  nil   nil 'I  'E  () nil nil "Caramanta")
             ("crg" nil  nil   nil 'I  'L  () nil nil "Michif")
             ("crh" nil  "crh" nil 'I  'L  () nil "Къырым Татар" "Crimean Tatar")
@@ -1671,9 +1684,9 @@
             ("deh" nil  nil   nil 'I  'L  () nil nil "Dehwari")
             ("dei" nil  nil   nil 'I  'L  () nil nil "Demisa")
             ("dek" nil  nil   nil 'I  'L  () nil nil "Dek")
-            ("del" nil  "del" nil 'M  'L  () nil "Lënape" "Delaware")
+            ("del" nil  "del" nil 'M  'L  ("umu" "unm") nil "Lënape" "Delaware")
             ("dem" nil  nil   nil 'I  'L  () nil nil "Dem")
-            ("den" nil  "den" nil 'M  'L  () nil nil "Slave (Athapascan)")
+            ("den" nil  "den" nil 'M  'L  ("scs" "xsl") nil nil "Slave (Athapascan)")
             ("dep" nil  nil   nil 'I  'E  () nil nil "Delaware, Pidgin")
             ("deq" nil  nil   nil 'I  'L  () nil nil "Dendi (Central African Republic)")
             ("der" nil  nil   nil 'I  'L  () nil nil "Deori")
@@ -1726,7 +1739,8 @@
             ("dik" nil  nil   nil 'I  'L  () nil nil "Dinka, Southwestern")
             ("dil" nil  nil   nil 'I  'L  () nil nil "Dilling")
             ("dim" nil  nil   nil 'I  'L  () nil nil "Dime")
-            ("din" nil  "din" nil 'M  'L  () nil "Thuɔŋjäŋ" "Dinka")
+            ("din" nil  "din" nil 'M  'L  ("dib" "dik"
+                                           "dip" "diw" "dks") nil "Thuɔŋjäŋ" "Dinka")
             ("dio" nil  nil   nil 'I  'L  () nil nil "Dibo")
             ("dip" nil  nil   nil 'I  'L  () nil nil "Dinka, Northeastern")
             ("diq" nil  nil   nil 'I  'L  () nil nil "Dimli (individual language)")
@@ -1805,7 +1819,7 @@
             ("doe" nil  nil   nil 'I  'L  () nil nil "Doe")
             ("dof" nil  nil   nil 'I  'L  () nil nil "Domu")
             ("doh" nil  nil   nil 'I  'L  () nil "leec Gaeml" "Dong")
-            ("doi" nil  "doi" nil 'M  'L  () nil "डोगरी" "Dogri (generic)")
+            ("doi" nil  "doi" nil 'M  'L  ("dgo" "xnr") nil "डोगरी" "Dogri (generic)")
             ("dok" nil  nil   nil 'I  'L  () nil nil "Dondo")
             ("dol" nil  nil   nil 'I  'L  () nil nil "Doso")
             ("don" nil  nil   nil 'I  'L  () nil nil "Toura (Papua New Guinea)")
@@ -2026,7 +2040,7 @@
             ("eso" nil  nil   nil 'I  'L  () nil nil "Estonian Sign Language")
             ("esq" nil  nil   nil 'I  'E  () nil nil "Esselen")
             ("ess" nil  nil   nil 'I  'L  () nil nil "Yupik, Central Siberian")
-            ("est" "et" "est" nil 'M  'L  () "Uralic" "eesti" "Estonian")
+            ("est" "et" "est" nil 'M  'L  ("ekk" "vro") "Uralic" "eesti" "Estonian")
             ("esu" nil  nil   nil 'I  'L  () nil nil "Yupik, Central")
             ("esy" nil  nil   nil 'I  'L  () nil nil "Eskayan")
             ("etb" nil  nil   nil 'I  'L  () nil nil "Etebi")
@@ -2069,7 +2083,7 @@
             ("fao" "fo" "fao" nil 'I  'L  () "Indo-European" "føroyskt" "Faroese")
             ("fap" nil  nil   nil 'I  'L  () nil nil "Palor")
             ("far" nil  nil   nil 'I  'L  () nil nil "Fataleka")
-            ("fas" "fa" "per" nil 'M  'L  () "Indo-European" "فارسی" "Persian")
+            ("fas" "fa" "per" nil 'M  'L  ("pes" "prs") "Indo-European" "فارسی" "Persian")
             ("fat" nil  "fat" nil 'I  'L  () nil nil "Fanti")
             ("fau" nil  nil   nil 'I  'L  () nil nil "Fayu")
             ("fax" nil  nil   nil 'I  'L  () nil "Fala" "Fala")
@@ -2140,7 +2154,9 @@
             ("fuh" nil  nil   nil 'I  'L  () "Niger–Congo" nil "Fulfulde, Western Niger")
             ("fui" nil  nil   nil 'I  'L  () "Niger–Congo" nil "Fulfulde, Bagirmi")
             ("fuj" nil  nil   nil 'I  'L  () nil nil "Ko")
-            ("ful" "ff" "ful" nil 'M  'L  () "Niger–Congo" "Fulfulde" "Fulah")
+            ("ful" "ff" "ful" nil 'M  'L  ("bdt"
+                                           "gbp" "gbq" "gmm"
+                                           "gso" "gya" "mdo") "Niger–Congo" "Fulfulde" "Fulah")
             ("fum" nil  nil   nil 'I  'L  () nil nil "Fum")
             ("fun" nil  nil   nil 'I  'L  () nil nil "Fulniô")
             ("fuq" nil  nil   nil 'I  'L  () "Niger–Congo" nil "Fulfulde, Central-Eastern Niger")
@@ -2382,7 +2398,8 @@
             ("gok" nil  nil   nil 'I  'L  () nil nil "Gowli")
             ("gol" nil  nil   nil 'I  'L  () nil nil "Gola")
             ("gom" nil  nil   nil 'I  'L  () nil "ಕೊಂಕಣಿ" "Konkani, Goan")
-            ("gon" nil  "gon" nil 'M  'L  () nil nil "Gondi")
+            ("gon" nil  "gon" nil 'M  'L  ("esg"
+                                           "gno" "wsg" "ggo") nil nil "Gondi")
             ("goo" nil  nil   nil 'I  'L  () nil nil "Gone Dau")
             ("gop" nil  nil   nil 'I  'L  () nil nil "Yeretuar")
             ("goq" nil  nil   nil 'I  'L  () nil nil "Gorap")
@@ -2404,7 +2421,8 @@
             ("gqr" nil  nil   nil 'I  'L  () nil nil "Gor")
             ("gqu" nil  nil   nil 'I  'L  () nil nil "Qau")
             ("gra" nil  nil   nil 'I  'L  () nil nil "Garasia, Rajput")
-            ("grb" nil  "grb" nil 'M  'L  () nil nil "Grebo")
+            ("grb" nil  "grb" nil 'M  'L  ("gbo" "gec"
+                                           "grj" "grv" "gry") nil nil "Grebo")
             ("grc" nil  "grc" nil 'I  'H  () nil "ἑλληνικά" "Greek, Ancient (to 1453)")
             ("grd" nil  nil   nil 'I  'L  () nil nil "Guruntum-Mbaaru")
             ("grg" nil  nil   nil 'I  'L  () nil nil "Madi")
@@ -2412,7 +2430,8 @@
             ("gri" nil  nil   nil 'I  'L  () nil nil "Ghari")
             ("grj" nil  nil   nil 'I  'L  () nil nil "Grebo, Southern")
             ("grm" nil  nil   nil 'I  'L  () nil nil "Kota Marudu Talantang")
-            ("grn" "gn" "grn" nil 'M  'L  () "Tupian" "Avañe'ẽ" "Guarani")
+            ("grn" "gn" "grn" nil 'M  'L  ("gnw" "gug"
+                                           "gui" "gun" "nhd") "Tupian" "Avañe'ẽ" "Guarani")
             ("gro" nil  nil   nil 'I  'L  () nil nil "Groma")
             ("grq" nil  nil   nil 'I  'L  () nil nil "Gorovu")
             ("grr" nil  nil   nil 'I  'L  () nil nil "Taznatit")
@@ -2518,7 +2537,7 @@
             ("haf" nil  nil   nil 'I  'L  () nil nil "Haiphong Sign Language")
             ("hag" nil  nil   nil 'I  'L  () nil nil "Hanga")
             ("hah" nil  nil   nil 'I  'L  () nil nil "Hahon")
-            ("hai" nil  "hai" nil 'M  'L  () nil "X̲aat Kíl" "Haida")
+            ("hai" nil  "hai" nil 'M  'L  ("hax" "hdn") nil "X̲aat Kíl" "Haida")
             ("haj" nil  nil   nil 'I  'L  () nil nil "Hajong")
             ("hak" nil  nil   nil 'I  'L  () "Chinese" nil "Hakka Chinese")
             ("hal" nil  nil   nil 'I  'L  () nil nil "Halang")
@@ -2540,7 +2559,8 @@
             ("hbb" nil  nil   nil 'I  'L  () nil nil "Huba")
             ("hbn" nil  nil   nil 'I  'L  () nil nil "Heiban")
             ("hbo" nil  nil   nil 'I  'H  () nil nil "Hebrew, Ancient")
-            ("hbs" nil  nil   nil 'M  'L  () "Indo-European" "српскохрватски / hrvatskosrpski" "Serbo-Croatian")
+            ("hbs" nil  nil   nil 'M  'L  ("bos"
+                                           "cnr" "hrv" "srp") "Indo-European" "српскохрватски / hrvatskosrpski" "Serbo-Croatian")
             ("hbu" nil  nil   nil 'I  'L  () nil nil "Habu")
             ("hca" nil  nil   nil 'I  'L  () nil nil "Andaman Creole Hindi")
             ("hch" nil  nil   nil 'I  'L  () nil nil "Huichol")
@@ -2603,7 +2623,15 @@
             ("hmk" nil  nil   nil 'I  'A  () nil nil "Maek")
             ("hml" nil  nil   nil 'I  'L  () "Hmong" nil "Hmong, Luopohe")
             ("hmm" nil  nil   nil 'I  'L  () nil nil "Hmong, Central Mashan")
-            ("hmn" nil  "hmn" nil 'M  'L  () "Hmong" "Hmoob" "Hmong")
+            ("hmn" nil  "hmn" nil 'M  'L  ("cqd" "hea"
+                                           "hma" "hmc" "hmd"
+                                           "hme" "hmg" "hmh"
+                                           "hmi" "hmj" "hml"
+                                           "hmm" "hmp" "hmq"
+                                           "hms" "hmw" "hmy"
+                                           "hmz" "hnj" "hrm"
+                                           "huj" "mmr" "muq"
+                                           "mww" "sfm" "blu") "Hmong" "Hmoob" "Hmong")
             ("hmo" "ho" "hmo" nil 'I  'L  () "Austronesian" nil "Hiri Motu")
             ("hmp" nil  nil   nil 'I  'L  () "Hmong" nil "Hmong, Northern Mashan")
             ("hmq" nil  nil   nil 'I  'L  () "Hmong" nil "Hmong, Eastern Qiandong")
@@ -2782,7 +2810,7 @@
             ("ikr" nil  nil   nil 'I  'E  () nil nil "Ikaranggal")
             ("iks" nil  nil   nil 'I  'L  () nil nil "Inuit Sign Language")
             ("ikt" nil  nil   nil 'I  'L  () "Eskimo–Aleut" nil "Inuktitut (Western Canadian)")
-            ("iku" "iu" "iku" nil 'M  'L  () "Eskimo–Aleut" "ᐃᓄᒃᑎᑐᑦ" "Inuktitut")
+            ("iku" "iu" "iku" nil 'M  'L  ("ike" "ikt") "Eskimo–Aleut" "ᐃᓄᒃᑎᑐᑦ" "Inuktitut")
             ("ikv" nil  nil   nil 'I  'L  () nil nil "Iku-Gora-Ankwa")
             ("ikw" nil  nil   nil 'I  'L  () nil nil "Ikwere")
             ("ikx" nil  nil   nil 'I  'L  () nil nil "Ik")
@@ -2831,7 +2859,7 @@
             ("iou" nil  nil   nil 'I  'L  () nil nil "Tuma-Irumu")
             ("iow" nil  nil   nil 'I  'E  () nil nil "Iowa-Oto")
             ("ipi" nil  nil   nil 'I  'L  () nil nil "Ipili")
-            ("ipk" "ik" "ipk" nil 'M  'L  () "Eskimo–Aleut" "Iñupiaq" "Inupiaq")
+            ("ipk" "ik" "ipk" nil 'M  'L  ("esi" "esk") "Eskimo–Aleut" "Iñupiaq" "Inupiaq")
             ("ipo" nil  nil   nil 'I  'L  () nil nil "Ipiko")
             ("iqu" nil  nil   nil 'I  'L  () nil nil "Iquito")
             ("iqw" nil  nil   nil 'I  'L  () nil nil "Ikwo")
@@ -3012,7 +3040,8 @@
             ("jpr" nil  "jpr" nil 'I  'L  () nil nil "Judeo-Persian")
             ("jqr" nil  nil   nil 'I  'L  () nil nil "Jaqaru")
             ("jra" nil  nil   nil 'I  'L  () nil nil "Jarai")
-            ("jrb" nil  "jrb" nil 'M  'L  () nil nil "Judeo-Arabic")
+            ("jrb" nil  "jrb" nil 'M  'L  ("aju" "jye"
+                                           "yhd" "yud" "ajt") nil nil "Judeo-Arabic")
             ("jrr" nil  nil   nil 'I  'L  () nil nil "Jiru")
             ("jrt" nil  nil   nil 'I  'L  () nil nil "Jorto")
             ("jru" nil  nil   nil 'I  'L  () nil nil "Japrería")
@@ -3062,7 +3091,8 @@
             (nil   nil  "kar" nil 'C  nil () nil nil "Karen languages")
             ("kas" "ks" "kas" nil 'I  'L  () "Indo-European" "كشميري" "Kashmiri")
             ("kat" "ka" "geo" nil 'I  'L  () "Kartvelian" "ქართული" "Georgian")
-            ("kau" "kr" "kau" nil 'M  'L  () "Nilo-Saharan" "kanuri" "Kanuri")
+            ("kau" "kr" "kau" nil 'M  'L  ("kby" "knc"
+                                           "krt" "bms" "kbl") "Nilo-Saharan" "kanuri" "Kanuri")
             ("kav" nil  nil   nil 'I  'L  () nil nil "Katukína")
             ("kaw" nil  "kaw" nil 'I  'A  () nil "Bhāṣa Kawi" "Kawi")
             ("kax" nil  nil   nil 'I  'L  () nil nil "Kao")
@@ -3337,7 +3367,9 @@
             ("klk" nil  nil   nil 'I  'L  () nil nil "Kono (Nigeria)")
             ("kll" nil  nil   nil 'I  'L  () nil nil "Kalagan, Kagan")
             ("klm" nil  nil   nil 'I  'L  () nil nil "Kolom")
-            ("kln" nil  nil   nil 'M  'L  () nil nil "Kalenjin")
+            ("kln" nil  nil   nil 'M  'L  ("enb" "eyo" "niq"
+                                           "oki" "pko" "sgc"
+                                           "spy" "tec" "tuy") nil nil "Kalenjin")
             ("klo" nil  nil   nil 'I  'L  () nil nil "Kapya")
             ("klp" nil  nil   nil 'I  'L  () nil nil "Kamasa")
             ("klq" nil  nil   nil 'I  'L  () nil nil "Rumu")
@@ -3412,10 +3444,10 @@
             ("koh" nil  nil   nil 'I  'L  () nil nil "Koyo")
             ("koi" nil  nil   nil 'I  'L  () nil "перым-коми" "Komi-Permyak")
             ("koj" nil  nil   t   'I  'L  () nil nil "Sara Dunjo")
-            ("kok" nil  "kok" nil 'M  'L  () nil "कॊंकणि" "Konkani (generic)")
+            ("kok" nil  "kok" nil 'M  'L  ("gom" "knn") nil "कॊंकणि" "Konkani (generic)")
             ("kol" nil  nil   nil 'I  'L  () nil nil "Kol (Papua New Guinea)")
-            ("kom" "kv" "kom" nil 'M  'L  () "Uralic" "коми" "Komi")
-            ("kon" "kg" "kon" nil 'M  'L  () "Niger–Congo" "Kikongo" "Kongo")
+            ("kom" "kv" "kom" nil 'M  'L  ("koi" "kpv") "Uralic" "коми" "Komi")
+            ("kon" "kg" "kon" nil 'M  'L  ("kng" "kwy" "ldi") "Niger–Congo" "Kikongo" "Kongo")
             ("koo" nil  nil   nil 'I  'L  () nil nil "Konjo")
             ("kop" nil  nil   nil 'I  'L  () nil nil "Kwato")
             ("koq" nil  nil   nil 'I  'L  () nil nil "Kota (Gabon)")
@@ -3432,7 +3464,7 @@
             ("kpb" nil  nil   nil 'I  'L  () nil nil "Kurumba, Mullu")
             ("kpc" nil  nil   nil 'I  'L  () nil nil "Curripaco")
             ("kpd" nil  nil   nil 'I  'L  () nil nil "Koba")
-            ("kpe" nil  "kpe" nil 'M  'L  () nil "kpele" "Kpelle")
+            ("kpe" nil  "kpe" nil 'M  'L  ("gkp" "xpe") nil "kpele" "Kpelle")
             ("kpf" nil  nil   nil 'I  'L  () nil nil "Komba")
             ("kpg" nil  nil   nil 'I  'L  () nil nil "Kapingamarangi")
             ("kph" nil  nil   nil 'I  'L  () nil nil "Kplang")
@@ -3575,7 +3607,7 @@
             ("kuo" nil  nil   nil 'I  'L  () nil nil "Kumukio")
             ("kup" nil  nil   nil 'I  'L  () nil nil "Kunimaipa")
             ("kuq" nil  nil   nil 'I  'L  () nil nil "Karipuná")
-            ("kur" "ku" "kur" nil 'M  'L  () "Indo-European" "Kurdî" "Kurdish")
+            ("kur" "ku" "kur" nil 'M  'L  ("ckb" "kmr" "sdh") "Indo-European" "Kurdî" "Kurdish")
             ("kus" nil  nil   nil 'I  'L  () nil nil "Kusaal")
             ("kut" nil  "kut" nil 'I  'L  () nil "Ktunaxa" "Kutenai")
             ("kuu" nil  nil   nil 'I  'L  () nil nil "Kuskokwim, Upper")
@@ -3722,7 +3754,7 @@
             ("lae" nil  nil   nil 'I  'L  () nil nil "Pattani")
             ("laf" nil  nil   nil 'I  'L  () nil nil "Lafofa")
             ("lag" nil  nil   nil 'I  'L  () nil nil "Langi")
-            ("lah" nil  "lah" nil 'M  'L  () nil "ਲਹਿੰਦੀ" "Lahnda")
+            ("lah" nil  "lah" nil 'M  'L  ("ltg" "lvs") nil "ਲਹਿੰਦੀ" "Lahnda")
             ("lai" nil  nil   nil 'I  'L  () nil nil "Lambya")
             ("laj" nil  nil   nil 'I  'L  () nil nil "Lango (Uganda)")
             ("lak" nil  nil   t   'I  'L  () nil nil "Laka (Nigeria)")
@@ -4051,7 +4083,11 @@
             ("luu" nil  nil   nil 'I  'L  () nil nil "Lumba-Yakkha")
             ("luv" nil  nil   nil 'I  'L  () nil nil "Luwati")
             ("luw" nil  nil   nil 'I  'L  () nil nil "Luo")
-            ("luy" nil  nil   nil 'M  'L  () nil nil "Luyia")
+            ("luy" nil  nil   nil 'M  'L  ("bxk" "ida"
+                                           "lkb" "lko" "lks"
+                                           "lri" "lrm" "lsm"
+                                           "lto" "lts" "lwg"
+                                           "nle" "nyd" "rag") nil nil "Luyia")
             ("luz" nil  nil   nil 'I  'L  () nil nil "Luri, Southern")
             ("lva" nil  nil   nil 'I  'L  () nil nil "Maku'a")
             ("lvi" nil  nil   nil 'I  'L  () "Austronesian" nil "Lavi")
@@ -4091,7 +4127,9 @@
             ("mak" nil  "mak" nil 'I  'L  () nil nil "Makasar")
             ("mal" "ml" "mal" nil 'I  'L  () "Dravidian" "മലയാളം" "Malayalam")
             ("mam" nil  nil   nil 'I  'L  () nil nil "Mam, Northern")
-            ("man" nil  "man" nil 'M  'L  () nil nil "Mandingo")
+            ("man" nil  "man" nil 'M  'L  ("emk"
+                                           "mku" "mlq" "mnk"
+                                           "msc" "mwk" "myq") nil nil "Mandingo")
             (nil   nil  "map" nil 'C  nil () nil nil "Austronesian languages")
             ("maq" nil  nil   nil 'I  'L  () nil nil "Mazatec, Chiquihuitlán")
             ("mar" "mr" "mar" nil 'I  'L  () "Indo-European" "मराठी" "Marathi")
@@ -4366,7 +4404,10 @@
             ("mld" nil  nil   t   'I  'L  () nil nil "Malakhel")
             ("mle" nil  nil   nil 'I  'L  () nil nil "Manambu")
             ("mlf" nil  nil   nil 'I  'L  () nil nil "Mal")
-            ("mlg" "mg" "mlg" nil 'M  'L  () "Austronesian" "Malagasy" "Malagasy")
+            ("mlg" "mg" "mlg" nil 'M  'L  ("bhr" "bmm" "bzc"
+                                           "msh" "plt" "skg"
+                                           "tdx" "tkg" "txy"
+                                           "xmv" "xmw" "bjq") "Austronesian" "Malagasy" "Malagasy")
             ("mlh" nil  nil   nil 'I  'L  () nil nil "Mape")
             ("mli" nil  nil   nil 'I  'L  () nil nil "Malimpung")
             ("mlj" nil  nil   nil 'I  'L  () nil nil "Miltu")
@@ -4451,7 +4492,7 @@
             ("mok" nil  nil   nil 'I  'L  () nil nil "Morori")
             ("mol" nil  nil   t   nil nil () nil nil "Moldavian")
             ("mom" nil  nil   nil 'I  'E  () nil nil "Monimbo")
-            ("mon" "mn" "mon" nil 'M  'L  () "Mongolic" "монгол" "Mongolian")
+            ("mon" "mn" "mon" nil 'M  'L  ("khk" "mvf") "Mongolic" "монгол" "Mongolian")
             ("moo" nil  nil   nil 'I  'L  () nil nil "Monom")
             ("mop" nil  nil   nil 'I  'L  () nil nil "Mopán Maya")
             ("moq" nil  nil   nil 'I  'L  () nil nil "Mor (Bomberai Peninsula)")
@@ -4542,7 +4583,19 @@
             ("mrx" nil  nil   nil 'I  'L  () nil nil "Maremgi")
             ("mry" nil  nil   nil 'I  'L  () nil nil "Mandaya, Karaga")
             ("mrz" nil  nil   nil 'I  'L  () nil nil "Marind")
-            ("msa" "ms" "may" nil 'M  'L  () "Austronesian" "bahasa Melayu" "Malay (generic)")
+            ("msa" "ms" "may" nil 'M  'L  ("bjn"
+                                           "btj" "bve" "bvu"
+                                           "coa" "dup" "hji"
+                                           "ind" "jak" "jax"
+                                           "kvb" "kvr" "kxd"
+                                           "lce" "lcf" "liw"
+                                           "max" "meo" "mfa"
+                                           "mfb" "min" "mqg"
+                                           "msi" "mui" "orn"
+                                           "ors" "pel" "pse"
+                                           "tmw" "urk" "vkk"
+                                           "vkt" "xmm" "zlm"
+                                           "zmi" "zsm" "mly") "Austronesian" "bahasa Melayu" "Malay (generic)")
             ("msb" nil  nil   nil 'I  'L  () nil nil "Masbatenyo")
             ("msc" nil  nil   nil 'I  'L  () nil nil "Maninka, Sankaran")
             ("msd" nil  nil   nil 'I  'L  () nil nil "Yucatec Maya Sign Language")
@@ -4662,7 +4715,8 @@
             ("mwo" nil  nil   nil 'I  'L  () nil nil "Maewo, Central")
             ("mwp" nil  nil   nil 'I  'L  () nil nil "Kala Lagaw Ya")
             ("mwq" nil  nil   nil 'I  'L  () nil nil "Chin, Mün")
-            ("mwr" nil  "mwr" nil 'M  'L  () nil "मारवाड़ी" "Marwari")
+            ("mwr" nil  "mwr" nil 'M  'L  ("dhd" "mtr" "mve"
+                                           "rwr" "swv" "wry") nil "मारवाड़ी" "Marwari")
             ("mws" nil  nil   nil 'I  'L  () nil nil "Mwimbi-Muthambi")
             ("mwt" nil  nil   nil 'I  'L  () nil nil "Moken")
             ("mwu" nil  nil   nil 'I  'E  () nil nil "Mittu")
@@ -4864,7 +4918,7 @@
             ("nem" nil  nil   nil 'I  'L  () nil nil "Nemi")
             ("nen" nil  nil   nil 'I  'L  () nil nil "Nengone")
             ("neo" nil  nil   nil 'I  'L  () nil nil "Ná-Meo")
-            ("nep" "ne" "nep" nil 'M  'L  () "Indo-European" "नेपाली" "Nepali")
+            ("nep" "ne" "nep" nil 'M  'L  ("dty" "npi") "Indo-European" "नेपाली" "Nepali")
             ("neq" nil  nil   nil 'I  'L  () nil nil "Mixe, North Central")
             ("ner" nil  nil   nil 'I  'L  () nil nil "Yahadian")
             ("nes" nil  nil   nil 'I  'L  () nil nil "Kinnauri, Bhoti")
@@ -5088,7 +5142,7 @@
             ("noo" nil  nil   t   'I  'L  () nil "Nuučaan̓uł" "Nootka")
             ("nop" nil  nil   nil 'I  'L  () nil nil "Numanggang")
             ("noq" nil  nil   nil 'I  'L  () nil nil "Ngongo")
-            ("nor" "no" "nor" nil 'M  'L  () "Indo-European" "norsk" "Norwegian")
+            ("nor" "no" "nor" nil 'M  'L  ("nno" "nob") "Indo-European" "norsk" "Norwegian")
             ("nos" nil  nil   nil 'I  'L  () nil nil "Yi, Eastern Nisu")
             ("not" nil  nil   nil 'I  'L  () nil nil "Nomatsiguenga")
             ("nou" nil  nil   nil 'I  'L  () nil nil "Ewage-Notu")
@@ -5309,7 +5363,9 @@
             ("ojb" nil  nil   nil 'I  'L  () nil "Anishinaabemowin (Ojibwemowin)" "Ojibwa, Northwestern")
             ("ojc" nil  nil   nil 'I  'L  () nil "Anishinaabemowin (Ojibwemowin)" "Ojibwa, Central")
             ("ojg" nil  nil   nil 'I  'L  () nil "Nishnaabemwin (Jibwemwin)" "Ojibwa, Eastern")
-            ("oji" "oj" "oji" nil 'M  'L  () "Cree" "ᐊᓂᔑᓇᐯᒧᐎᓐ (Anishinaabemowin)" "Ojibwa")
+            ("oji" "oj" "oji" nil 'M  'L  ("ciw"
+                                           "ojb" "ojc" "ojg"
+                                           "ojs" "ojw" "otw") "Cree" "ᐊᓂᔑᓇᐯᒧᐎᓐ (Anishinaabemowin)" "Ojibwa")
             ("ojp" nil  nil   nil 'I  'H  () nil nil "Japanese, Old")
             ("ojs" nil  nil   nil 'I  'L  () nil "ᐊᓂᔑᓂᓂᒧᐎᓐ (Anishininiimowin)" "Ojibwa, Severn")
             ("ojv" nil  nil   nil 'I  'L  () nil nil "Ontong Java")
@@ -5393,9 +5449,10 @@
             ("ore" nil  nil   nil 'I  'L  () nil nil "Orejón")
             ("org" nil  nil   nil 'I  'L  () nil nil "Oring")
             ("orh" nil  nil   nil 'I  'L  () nil nil "Oroqen")
-            ("ori" "or" "ori" nil 'M  'L  () "Indo-European" "ଓଡ଼ିଆ" "Oriya")
+            ("ori" "or" "ori" nil 'M  'L  ("ory" "spv") "Indo-European" "ଓଡ଼ିଆ" "Oriya")
             ("ork" nil  nil   t   nil nil () nil nil "Orokaiva")
-            ("orm" "om" "orm" nil 'M  'L  () "Afro-Asiatic" "Oromoo" "Oromo")
+            ("orm" "om" "orm" nil 'M  'L  ("gax"
+                                           "gaz" "hae" "orc") "Afro-Asiatic" "Oromoo" "Oromo")
             ("orn" nil  nil   nil 'I  'L  () nil nil "Orang Kanaq")
             ("oro" nil  nil   nil 'I  'L  () nil nil "Orokolo")
             ("orr" nil  nil   nil 'I  'L  () nil nil "Oruma")
@@ -5797,7 +5854,7 @@
             ("pup" nil  nil   nil 'I  'L  () nil nil "Pulabu")
             ("puq" nil  nil   nil 'I  'E  () nil nil "Puquina")
             ("pur" nil  nil   nil 'I  'L  () nil nil "Puruborá")
-            ("pus" "ps" "pus" nil 'M  'L  () "Indo-European" "پښتو" "Pushto")
+            ("pus" "ps" "pus" nil 'M  'L  ("pbt" "pbu" "pst") "Indo-European" "پښتو" "Pushto")
             ("put" nil  nil   nil 'I  'L  () nil nil "Putoh")
             ("puu" nil  nil   nil 'I  'L  () nil nil "Punu")
             ("puw" nil  nil   nil 'I  'L  () nil nil "Puluwatese")
@@ -5829,7 +5886,21 @@
             ("qub" nil  nil   nil 'I  'L  () "Quechuan" nil "Quechua, Huallaga Huánuco")
             ("quc" nil  nil   nil 'I  'L  () "Maya" "k'iche’" "K’iche’")
             ("qud" nil  nil   nil 'I  'L  () "Quichua" nil "Quichua, Calderón Highland")
-            ("que" "qu" "que" nil 'M  'L  () "Quechuan" "Runa Simi" "Quechua")
+            ("que" "qu" "que" nil 'M  'L  ("qub" "qud"
+                                           "quf" "qug" "quh"
+                                           "quk" "qul" "qup"
+                                           "qur" "qus" "quw"
+                                           "qux" "quy" "quz"
+                                           "qva" "qvc" "qve"
+                                           "qvh" "qvi" "qvj"
+                                           "qvl" "qvm" "qvn"
+                                           "qvo" "qvp" "qvs"
+                                           "qvw" "qvz" "qwa"
+                                           "qwc" "qwh" "qws"
+                                           "qxa" "qxc" "qxh"
+                                           "qxl" "qxn" "qxo"
+                                           "qxp" "qxr" "qxt"
+                                           "qxu" "qxw" "cqu") "Quechuan" "Runa Simi" "Quechua")
             ("quf" nil  nil   nil 'I  'L  () "Quechuan" nil "Quechua, Lambayeque")
             ("qug" nil  nil   nil 'I  'L  () "Quichua" nil "Quichua, Chimborazo Highland")
             ("quh" nil  nil   nil 'I  'L  () "Quechuan" nil "Quechua, South Bolivian")
@@ -5897,7 +5968,8 @@
             ("rag" nil  nil   nil 'I  'L  () nil nil "Logooli")
             ("rah" nil  nil   nil 'I  'L  () nil nil "Rabha")
             ("rai" nil  nil   nil 'I  'L  () nil nil "Ramoaaina")
-            ("raj" nil  "raj" nil 'M  'L  () nil nil "Rajasthani")
+            ("raj" nil  "raj" nil 'M  'L  ("bgq" "gda" "gju"
+                                           "hoj" "mup" "wbr") nil nil "Rajasthani")
             ("rak" nil  nil   nil 'I  'L  () nil nil "Tulu-Bohuai")
             ("ral" nil  nil   nil 'I  'L  () nil nil "Ralte")
             ("ram" nil  nil   nil 'I  'L  () nil nil "Canela")
@@ -6006,7 +6078,9 @@
             ("rog" nil  nil   nil 'I  'L  () nil nil "Roglai, Northern")
             ("roh" "rm" "roh" nil 'I  'L  () "Indo-European" "rumantsch" "Raeto-Romance")
             ("rol" nil  nil   nil 'I  'L  () nil nil "Romblomanon")
-            ("rom" nil  "rom" nil 'M  'L  () nil "रोमानो" "Romany")
+            ("rom" nil  "rom" nil 'M  'L  ("rmc"
+                                           "rmf" "rml" "rmn"
+                                           "rmo" "rmw" "rmy") nil "रोमानो" "Romany")
             ("ron" "ro" "rum" nil 'I  'L  () "Indo-European" "română" "Romanian")
             ("roo" nil  nil   nil 'I  'L  () nil nil "Rotokas")
             ("rop" nil  nil   nil 'I  'L  () nil nil "Kriol")
@@ -6075,7 +6149,7 @@
             ("sak" nil  nil   nil 'I  'L  () nil nil "Sake")
             (nil   nil  "sal" nil 'C  nil () nil nil "Salishan languages")
             ("sam" nil  "sam" nil 'I  'E  () nil "ܐܪܡܝܐ" "Aramaic, Samaritan")
-            ("san" "sa" "san" nil 'I  'A  () "Indo-European" "संस्कृतम्" "Sanskrit")
+            ("san" "sa" "san" nil 'I  'A  ("cls" "vsn") "Indo-European" "संस्कृतम्" "Sanskrit")
             ("sao" nil  nil   nil 'I  'L  () nil nil "Sause")
             ("sap" nil  nil   t   'I  'L  () nil nil "Sanapaná")
             ("saq" nil  nil   nil 'I  'L  () nil nil "Samburu")
@@ -6428,7 +6502,8 @@
             ("spy" nil  nil   nil 'I  'L  () nil nil "Sabaot")
             ("sqa" nil  nil   nil 'I  'L  () nil nil "Shama-Sambuga")
             ("sqh" nil  nil   nil 'I  'L  () nil nil "Shau")
-            ("sqi" "sq" "alb" nil 'M  'L  () "Indo-European" "Shqip" "Albanian")
+            ("sqi" "sq" "alb" nil 'M  'L  ("aae"
+                                           "aat" "aln" "als") "Indo-European" "Shqip" "Albanian")
             ("sqk" nil  nil   nil 'I  'L  () nil nil "Albanian Sign Language")
             ("sqm" nil  nil   nil 'I  'L  () nil nil "Suma")
             ("sqn" nil  nil   nil 'I  'E  () nil nil "Susquehannock")
@@ -6442,7 +6517,8 @@
             ("sra" nil  nil   nil 'I  'L  () nil nil "Saruga")
             ("srb" nil  nil   nil 'I  'L  () nil nil "Sora")
             ("src" nil  nil   nil 'I  'L  () nil nil "Sardinian, Logudorese")
-            ("srd" "sc" "srd" nil 'M  'L  () "Indo-European" "sardu" "Sardinian")
+            ("srd" "sc" "srd" nil 'M  'L  ("sdc"
+                                           "sdn" "src" "sro") "Indo-European" "sardu" "Sardinian")
             ("sre" nil  nil   nil 'I  'L  () nil nil "Sara")
             ("srf" nil  nil   nil 'I  'L  () nil nil "Nafi")
             ("srg" nil  nil   nil 'I  'L  () nil nil "Sulod")
@@ -6548,7 +6624,7 @@
             ("svr" nil  nil   t   'I  'L  () nil nil "Savara")
             ("svs" nil  nil   nil 'I  'L  () nil nil "Savosavo")
             ("svx" nil  nil   nil 'I  'H  () nil nil "Skalvian")
-            ("swa" "sw" "swa" nil 'M  'L  () "Niger–Congo" "kiswahili" "Swahili (generic)")
+            ("swa" "sw" "swa" nil 'M  'L  ("swc" "swh") "Niger–Congo" "kiswahili" "Swahili (generic)")
             ("swb" nil  nil   nil 'I  'L  () nil "شِقُمُرِ" "Comorian")
             ("swc" nil  nil   nil 'I  'L  () nil nil "Swahili, Congo")
             ("swe" "sv" "swe" nil 'I  'L  () "Indo-European" "svenska" "Swedish")
@@ -6594,7 +6670,7 @@
             ("sym" nil  nil   nil 'I  'L  () nil nil "Samo, Maya")
             ("syn" nil  nil   nil 'I  'L  () nil nil "Senaya")
             ("syo" nil  nil   nil 'I  'L  () nil nil "Suoy")
-            ("syr" nil  "syr" nil 'M  'L  () nil "ܣܘܪܝܐܝܐ" "Syriac")
+            ("syr" nil  "syr" nil 'M  'L  ("aii" "cld") nil "ܣܘܪܝܐܝܐ" "Syriac")
             ("sys" nil  nil   nil 'I  'L  () nil nil "Sinyar")
             ("syw" nil  nil   nil 'I  'L  () nil nil "Kagate")
             ("syx" nil  nil   nil 'I  'L  () "Niger–Congo" nil "Samay")
@@ -6878,7 +6954,8 @@
             ("tme" nil  nil   nil 'I  'E  () nil nil "Tremembé")
             ("tmf" nil  nil   nil 'I  'L  () nil nil "Toba-Maskoy")
             ("tmg" nil  nil   nil 'I  'E  () nil nil "Ternateño")
-            ("tmh" nil  "tmh" nil 'M  'L  () nil nil "Tamashek")
+            ("tmh" nil  "tmh" nil 'M  'L  ("taq"
+                                           "thv" "thz" "ttq") nil nil "Tamashek")
             ("tmi" nil  nil   nil 'I  'L  () nil nil "Tutuba")
             ("tmj" nil  nil   nil 'I  'L  () nil nil "Samarokena")
             ("tmk" nil  nil   t   'I  'L  () nil nil "Tamang, Northwestern")
@@ -7304,7 +7381,7 @@
             ("uvl" nil  nil   nil 'I  'L  () nil nil "Lote")
             ("uwa" nil  nil   nil 'I  'L  () nil nil "Kuku-Uwanh")
             ("uya" nil  nil   nil 'I  'L  () nil nil "Doko-Uyanga")
-            ("uzb" "uz" "uzb" nil 'M  'L  () "Turkic" "Ўзбек" "Uzbek")
+            ("uzb" "uz" "uzb" nil 'M  'L  ("uzn" "uzs") "Turkic" "Ўзбек" "Uzbek")
             ("uzn" nil  nil   nil 'I  'L  () nil nil "Uzbek, Northern")
             ("uzs" nil  nil   nil 'I  'L  () nil nil "Uzbek, Southern")
             ;; V
@@ -8053,7 +8130,7 @@
             ("yhs" nil  nil   nil 'I  'L  () nil nil "Yan-nhaŋu Sign Language")
             ("yia" nil  nil   nil 'I  'L  () nil nil "Yinggarda")
             ("yib" nil  nil   t   nil nil () nil nil "Yinglish")
-            ("yid" "yi" "yid" nil 'M  'L  () "Indo-European" "אידיש" "Yiddish")
+            ("yid" "yi" "yid" nil 'M  'L  ("ydd" "yih") "Indo-European" "אידיש" "Yiddish")
             ("yif" nil  nil   nil 'I  'L  () nil nil "Yi, Ache")
             ("yig" nil  nil   nil 'I  'L  () nil nil "Yi, Wusa (Wusa Nasu)")
             ("yih" nil  nil   nil 'I  'E  () nil nil "Yiddish, Western")
@@ -8246,7 +8323,12 @@
             ("zal" nil  nil   nil 'I  'L  () "Sino-Tibetan" nil "Zauzou")
             ("zam" nil  nil   nil 'I  'L  () "Zapotec" nil "Zapotec, Miahuatlán")
             ("zao" nil  nil   nil 'I  'L  () "Zapotec" nil "Zapotec, Ozolotepec")
-            ("zap" nil  "zap" nil 'M  'L  () "Zapotec" nil "Zapotec")
+            ("zap" nil  "zap" nil 'M  'L  ("zch" "zeh" "zgb"
+                                           "zgm" "zgn" "zhd"
+                                           "zhn" "zlj" "zln"
+                                           "zlq" "zqe" "zyb"
+                                           "zyg" "zyj" "zyn"
+                                           "zzj" "ccx" "ccy") "Zapotec" nil "Zapotec")
             ("zaq" nil  nil   nil 'I  'L  () "Zapotec" nil "Zapotec, Aloápam")
             ("zar" nil  nil   nil 'I  'L  () "Zapotec" nil "Zapotec, Rincón")
             ("zas" nil  nil   nil 'I  'L  () "Zapotec" nil "Zapotec, Santo Domingo Albarradas")
@@ -8284,7 +8366,12 @@
             ("zhd" nil  nil   nil 'I  'L  () "Tai–Kadai" nil "Dai Zhuang")
             ("zhi" nil  nil   nil 'I  'L  () "Niger–Congo" nil "Zhire")
             ("zhn" nil  nil   nil 'I  'L  () "Tai–Kadai" nil "Nong Zhuang")
-            ("zho" "zh" "chi" nil 'M  'L  () "Chinese" "中文; 汉语; 华语" "Chinese")
+            ("zho" "zh" "chi" nil 'M  'L  ("cdo"
+                                           "cjy" "cmn" "cnp"
+                                           "cpx" "csp" "czh"
+                                           "czo" "gan" "hak"
+                                           "hsn" "lzh" "mnp"
+                                           "nan" "wuu" "yue") "Chinese" "中文; 汉语; 华语" "Chinese")
             ("zhw" nil  nil   nil 'I  'L  () "Niger–Congo" nil "Zhoa")
             ("zia" nil  nil   nil 'I  'L  () "Trans–New Guinea" nil "Zia")
             ("zib" nil  nil   nil 'I  'L  () "isolate" nil "Zimbabwe Sign Language")
@@ -8419,6 +8506,6 @@
             ("zyj" nil  nil   nil 'I  'L  () "Tai–Kadai" nil "Youjiang Zhuang")
             ("zyn" nil  nil   nil 'I  'L  () "Tai–Kadai" nil "Yongnan Zhuang")
             ("zyp" nil  nil   nil 'I  'L  () "Sino-Tibetan" nil "Zyphe")
-            ("zza" nil  "zza" nil 'M  'L  () "Indo-European" nil "Zaza; Dimili")
+            ("zza" nil  "zza" nil 'M  'L  ("diq" "kiu") "Indo-European" nil "Zaza; Dimili")
             ("zzj" nil  nil   nil 'I  'L  () "Tai–Kadai" nil "Zuojiang Zhuang"))
   "")
