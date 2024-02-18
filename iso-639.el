@@ -8744,7 +8744,13 @@ desired or when a (possibly) \"good enough\" result may return."
   (member 'iso-639-3 (alist-get 'belongs-to lang)))
 
 (defun iso-639-retired-p (lang)
-  "Given a language structure of LANG, return \\='t\\=' if the code has been retired."
+  "Given a language structure of LANG, return \\='t\\=' if the code's been retired.
+
+The only codes for which retiring has occured have been ISO 639-3; nonetheless,
+– if the language's corresponding ISO 639-3 has been retired – this function
+will tell you.
+
+Retired ISO 639-3 codes generally do not have ISO 639-2 or ISO 639-1 codes."
 
   (alist-get 'retired lang))
 
