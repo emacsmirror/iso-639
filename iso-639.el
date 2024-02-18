@@ -28,7 +28,7 @@
 ;;; Code:
 (require 'levenshtein)
 
-(defconst iso-639---languages;Retired, Scope, Type, Macrolanguage mapping, Family, Native, English
+(defconst iso-639---languages
           ;; 3     1    2     ret sco typ mac family           nat english
           '(("aaa" nil  nil   nil 'I  'L  () "Atlantic–Congo" nil "Ghotuo")
             ("aab" nil  nil   nil 'I  'L  () "Atlantic–Congo" nil "Alumu-Tesu")
