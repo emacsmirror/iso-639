@@ -8606,3 +8606,18 @@ The tenth element is the name of the language in English.")
                                     nil))
                                 iso-639---languages)))))
       (if l (iso-639--create-lang-container l skipmacrop) l))))
+
+(defun iso-639-find-by-name (name)
+  ""
+
+  (let ((winner   nil)
+        (distance  -1))
+    (mapc (lambda (lang)
+            (let ((d (levenshtein-distance (downcase name)
+                                           (downcase (cadr (cddddr (cddddr lang)))))))
+              (when (or (= distance -1) (< d distance))
+                (setq distance d)
+                (setq winner   lang))))
+          iso-639---languages)
+
+    (iso-639--create-lang-container winner)))
