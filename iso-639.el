@@ -8508,4 +8508,35 @@
             ("zyp" nil  nil   nil 'I  'L  () "Sino-Tibetan" nil "Zyphe")
             ("zza" nil  "zza" nil 'M  'L  ("diq" "kiu") "Indo-European" nil "Zaza; Dimili")
             ("zzj" nil  nil   nil 'I  'L  () "Tai–Kadai" nil "Zuojiang Zhuang"))
-  "")
+  "An list of all ISO 639-1, -2, and -3 codes along with info. regarding them.
+
+Each element is a list belonging to an individual language as designated by the
+standardized nomenclatures.
+
+The first element of each element is the ISO 639-3 code for the language and, in
+cases where the language was – also – defined in ISO 639-2, the terminological
+code for ISO 639-2.
+
+The second element of any sublist is the ISO 639-1 code for a language, if
+designated/defined by the standardized nomenclature.
+
+The third element is the bibliographical code for ISO 639-2, if
+designated/defined by the standardized nomenclature.
+
+The fourth element is whether the ISO 639-3 code has been retired or not (a
+boolean).
+
+The fifth element is the Scope of the language, as a symbol of a single letter;
+this gets expanded in ….
+
+The sixth element is the Type of the language, as a symbol of a single letter;
+this gets expanded in ….
+
+The seventh element is a list of tags which are mapped to from the language
+(which is a macrolanguage, if the list is not empty).
+
+The eighth element is the linguistic family that the language belongs to.
+
+The ninth element is the name of the language in its native language.
+
+The tenth element is the name of the language in English.")
