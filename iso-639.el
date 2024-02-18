@@ -8781,3 +8781,12 @@ desired or when a (possibly) \"good enough\" result may return."
   "Given a language structure of LANG, return its name."
 
   (alist-get 'name lang))
+
+
+
+(provide 'iso-639)
+
+;; Local Variables:
+;; indent-tabs-mode: nil
+;; End:
+;;; iso-639.el ends here
