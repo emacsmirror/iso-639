@@ -4,7 +4,7 @@
 
 ;; Author: Jean Libète <tomenzgg@mail.mayfirst.org>
 ;; URL: https://codeberg.org/tomenzgg/emacs-iso-639
-;; Package-Requires: ((emacs "25.1") (levenshtein "20090830.1040"))
+;; Package-Requires: ((emacs "27.1"))
 ;; Version: 1.0
 ;; Keywords: tools, multilingual, language, iso-639
 
@@ -26,7 +26,6 @@
 ;; A library to handle ISO 639 language codes; attempts to cover 1–3.
 
 ;;; Code:
-(require 'levenshtein)
 ;; seq-find
 ;; seq-subseq
 (require 'seq)
@@ -8698,8 +8697,8 @@ desired or when a (possibly) \"good enough\" result may return."
   (let ((winner   nil)
         (distance  -1))
     (mapc (lambda (lang)
-            (let ((d (levenshtein-distance (downcase name)
-                                           (downcase (iso-639--name lang)))))
+            (let ((d (string-distance (downcase name)
+                                      (downcase (iso-639--name lang)))))
               (when (or (= distance -1) (< d distance))
                 (setq distance d)
                 (setq winner   lang))))
